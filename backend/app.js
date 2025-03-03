@@ -9,21 +9,22 @@ dotenv.config({path: "./config/config.env"});
 
 dbConnection();
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 //Connected our backend to frontend
 app.use(
     cors({
         origin: [process.env.FRONTEND_URI],
-        method: "POST",
+        methods: "POST",
         credentials: true
     })
 );
 
-app.use('./api/reservation', rootUser);
+app.use('/api/reservation', rootUser);
 
 
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+
 
 export default app;

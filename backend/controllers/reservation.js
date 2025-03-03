@@ -5,8 +5,10 @@ export const sendReservation = async (req, res, next) => {
         const { firstName, lastName, email, time, phone, date } = req.body;
 
         if (!firstName || !lastName || !email || !time || !phone || !date) {
-            return next(new ErrorHandler("Please fill the full reservation form!", 400));
+            return res.status(400).json({ success: false, message: "Please fill the full reservation form!" });
         }
+
+        await Reservation.create({ firstName, lastName, email, time, phone, date });
 
         res.status(200).json({
             success: true,

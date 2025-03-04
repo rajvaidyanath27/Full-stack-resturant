@@ -1,4 +1,4 @@
-import { Reservation } from "../models/reservationModel.js";
+import { Reservation } from "../models/reservationSchema.js";
 
 export const sendReservation = async (req, res, next) => {
     try {

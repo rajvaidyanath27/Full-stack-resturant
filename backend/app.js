@@ -1,30 +1,32 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import {dbConnection} from "./db/dbConnection.js";
+import { dbConnection } from "./db/dbConnection.js";
 import rootUser from "./routes/routeUser.js";
 
-const app = express();
-dotenv.config({path: "./config/config.env"});
+dotenv.config({ path: "./config/config.env" });
 
+const app = express();
 dbConnection();
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
-//Connected our backend to frontend
+
 app.use(
-    cors({
-        origin: [process.env.FRONTEND_URI],
-        methods: "POST",
-        credentials: true
-    })
+  cors({
+    origin: "http://localhost:5173", // Your frontend URL
+    methods: ["POST", "GET"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
 );
 
-app.use('/api/reservation', rootUser);
+
+app.options("*", cors());
 
 
-
-
+app.use("/api/reservation", rootUser);
 
 export default app;
+

@@ -16,7 +16,7 @@ const menuData = [
   },
   {
     category: "Desserts",
-    icon: <FaIceCream className="text-3xl text-pink-400" />,
+    icon: <FaIceCream className="text-3xl text-pink-700" />,
     items: [
       { name: "Chocolate Lava Cake", price: "$6", desc: "Warm cake with molten chocolate center", img: "#" },
       { name: "Vanilla Ice Cream", price: "$4", desc: "Classic creamy vanilla scoop", img: "#" },

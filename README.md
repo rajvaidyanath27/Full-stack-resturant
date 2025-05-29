@@ -1,12 +1,21 @@
-# React + Vite
+A modern restaurant web application built with the MERN stack (MongoDB, Express, React, Node.js). It allows users to browse the menu, book tables, place online orders, and manage restaurant operations from an admin panel.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+🧑‍🍳 User Features
+View categorized food menu (Veg/Non-Veg, Starters, Mains, Desserts, Beverages)
 
-Currently, two official plugins are available:
+Table booking with time and guest selection
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Online food ordering
 
-## Expanding the ESLint configuration
+Responsive design for all devices
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔐 Admin Panel
+Add, edit, delete menu items
+
+Manage table bookings
+
+View all customer orders
+
+Dashboard analytics (optional)
+

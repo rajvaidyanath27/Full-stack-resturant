@@ -21,5 +21,5 @@ Dashboard analytics (optional)
 
 🛠️ Tech Stack
 Frontend	Backend	Database	Tools
-React, TailwindCSS	Node.js, Express.js	MongoDB	Postman, Git, Vercel/Netlify, Render and etc.
+React, TailwindCSS	Node.js, Express.js	MongoDB	Postman, Git, Vercel/Netlify, Render and etc done
 
